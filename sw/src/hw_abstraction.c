@@ -41,6 +41,7 @@ uint8_t _hwAbstraction_readSerialByte() {
 	uint8_t byte = 0;
 	uint8_t i;
 
+	// TODO: correct bit order
 	for(i = 0; i < 8; i++) {
 		hwAbstraction_clkPulse();
 		byte |=	hwPeripherals_readSerialData() << i;
