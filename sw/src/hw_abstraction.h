@@ -34,9 +34,10 @@ void hwAbstraction_turnOffLed();
 // * pedals: one bit for each pedal. 0: pedal released, 1: pedal pushed.
 //   bit 0 maps to pedal no. 1 (lowest tone), ..., bit 24 maps to pedal 
 //   no. 25.
-// * midiChannel: the configured MIDI channel (0 - 127).
-// * configSwitch: state (0 or 1) of the configuration switch. 
+// * midiChannel: the configured MIDI channel (0 - 15).
+// * configSwitches: three configuration switches (bits 2 - 0).
+// * monoSwitch: 0: polyphonic sound, 1: monophonic sound. 
 void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *midiChannel, 
-	uint8_t *configSwitch);
+	uint8_t *configSwitches, uint8_t *monoSwitch);
 
 #endif // _HW_ABSTRACTION_H_

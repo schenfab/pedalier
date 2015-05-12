@@ -58,15 +58,15 @@ unsigned int _hwMock_isMidiOutputReady_array_index = 0;
 const unsigned int _hwMock_isMidiOutputReady_array_length = 10;
 const uint8_t _hwMock_isMidiOutputReady_array[] = { 0,0,1,0,1,1,0,0,0,1 };
 
-const uint8_t _hwMock_readConfigSwitch_value = 0;
+const uint8_t _hwMock_readMonoSwitch_value = 0;
 
 #elif INTEGRATION_TEST_NO == 2
 // Default integration test:
 //   - Mode: monophonic
-const unsigned int integrationTestRunner_loopCount = 5;
+const unsigned int integrationTestRunner_loopCount = 15;
 
 unsigned int _hwMock_readSerialData_array_index = 0;
-const unsigned int _hwMock_readSerialData_array_length = 5*32;
+const unsigned int _hwMock_readSerialData_array_length = 15*32;
 // Data order:
 // Byte 1: PED_01, CFG2,   CFG1,  CFG0,   A3,     A2,     A1,     A0
 // Byte 2: PED_09, PED_08, PED07, PED_06, PED_05, PED_04, PED_03, PED_02
@@ -74,16 +74,28 @@ const unsigned int _hwMock_readSerialData_array_length = 5*32;
 // Byte 4: PED_25, PED_24, PED23, PED_22, PED_21, PED_20, PED_19, PED_18
 const uint8_t _hwMock_readSerialData_array[] = { 
 	1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,0,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,0,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
 	1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+
+	1,1,1,1,1,1,1,1, 0,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,0,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,0,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 1,0,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
 	1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
-	1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+
+	1,1,1,1,1,1,1,1, 0,0,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,0,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
+	1,1,1,1,1,1,1,1, 0,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1,
 	1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1, 1,1,1,1,1,1,1,1
 	};
 
 unsigned int _hwMock_isMidiOutputReady_array_index = 0;
-const unsigned int _hwMock_isMidiOutputReady_array_length = 10;
-const uint8_t _hwMock_isMidiOutputReady_array[] = { 0,0,1,0,1,1,0,0,0,1 };
+const unsigned int _hwMock_isMidiOutputReady_array_length = 1;
+const uint8_t _hwMock_isMidiOutputReady_array[] = { 1 };
 
-const uint8_t _hwMock_readConfigSwitch_value = 1;
+const uint8_t _hwMock_readMonoSwitch_value = 1;
 
 #endif

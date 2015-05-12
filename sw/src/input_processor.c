@@ -28,10 +28,14 @@
 
 uint32_t previousPedalState, currentPedalState;
 uint8_t midiChannel;
-uint8_t configSwitch;
+uint8_t configSwitches;
+uint8_t monoSwitch;
 
 // TODO: is the lowest C on the pedal board really C1 (=midi 24)?
-const uint8_t midiNoteOffset = 24;
+const uint8_t midiNoteNumbers[25] = 
+	{ 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 
+	  36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 
+	  24 };
 
 // ***********************************************************************
 // Private methods
@@ -41,7 +45,7 @@ const uint8_t midiNoteOffset = 24;
 void _sendMidiNoteOn(uint8_t index) {
 	// Information taken from the Hammond XK-3c owners manual
 	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
-	hwAbstraction_sendMidiByte(midiNoteOffset + index);  // note number
+	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
 	hwAbstraction_sendMidiByte(0x7F);  // velocity
 }
 
@@ -49,7 +53,7 @@ void _sendMidiNoteOn(uint8_t index) {
 void _sendMidiNoteOff(uint8_t index) {
 	// Information taken from the Hammond XK-3c owners manual
 	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
-	hwAbstraction_sendMidiByte(midiNoteOffset + index);  // note number
+	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
 	hwAbstraction_sendMidiByte(0x00);  // velocity
 }
 
@@ -58,21 +62,40 @@ void _sendMidiNoteOff(uint8_t index) {
 void _inputProcessor_getStateChangeFromHw() {
 	previousPedalState = currentPedalState;
 	hwAbstraction_getPeripheralState(&currentPedalState, &midiChannel, 
-		&configSwitch);
+		&configSwitches, &monoSwitch);
 }
 
-// Debounces the state changes
+// Filters the currentPedalState.
+// Debounces the state changes.
 void _inputProcessor_debounce() {
-	// TODO
+	// TODO: implement only when necessary. (A test on the real HW will show if yes)
 }
 
-// In monophonic mode the first key push is forwarded. Following key pushes
-// are filtered until the first key is released.
+// Filters the currentPedalState.
+// In monophonic mode the key push of the lowest note is forwarded. Key pushes
+// of following, higher notes are filtered.
 // In polyphonic mode nothing is done.
-void _inputProcessor_filterPolyphony() {
-	// TODO
+void _inputProcessor_filterMonophony() {
+	if(monoSwitch == 0) {
+		// Polyphonic mode
+		return;
+	}
+	else {
+		// Find key push of lowest note
+		uint32_t lowestNote = 0x01000000;
+		uint8_t i;
+		for(i = 0; i <= 25; i++) {
+			// Stop loop when pushed key has been found
+			if((currentPedalState & lowestNote) == 0) {
+				break;
+			}
+			lowestNote = lowestNote >> 1;
+		}
+		// Filter currentPedalState
+		currentPedalState = 0x01FFFFFF & (~lowestNote);
+	}
 }
-#include <stdio.h>
+
 // The results of the processing chain are published to the MIDI and the
 // led interfaces. 
 void _inputProcessor_publishResult() {
@@ -118,7 +141,7 @@ void inputProcessor_processInputs() {
 
 	// Process inputs
 	_inputProcessor_debounce();
-	_inputProcessor_filterPolyphony();
+	_inputProcessor_filterMonophony();
 
 	// Publish result
 	_inputProcessor_publishResult();

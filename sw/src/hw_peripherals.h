@@ -44,9 +44,9 @@ void hwPeripherals_waitForTimer();
 void hwPeripherals_turnOnLed();
 void hwPeripherals_turnOffLed();
 
-// Read the state of the configuration switch. The return value is either
+// Read the state of the mono switch. The return value is either
 // 0 or 1.
-uint8_t hwPeripherals_readConfigSwitch();
+uint8_t hwPeripherals_readMonoSwitch();
 
 // Write a byte to the MIDI output
 void hwPeripherals_writeMidiByte(uint8_t byte);

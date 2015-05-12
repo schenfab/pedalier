@@ -43,7 +43,7 @@ extern unsigned int _hwMock_isMidiOutputReady_array_index;
 extern const unsigned int _hwMock_isMidiOutputReady_array_length;
 extern const uint8_t _hwMock_isMidiOutputReady_array[];
 
-extern const uint8_t _hwMock_readConfigSwitch_value;
+extern const uint8_t _hwMock_readMonoSwitch_value;
 
 // ***********************************************************************
 // Private methods
@@ -119,9 +119,9 @@ void hwPeripherals_turnOffLed() {
 	printf("HwMock:                  Status LED: 0\n");
 }
 
-uint8_t hwPeripherals_readConfigSwitch() {
-	printf("HwMock:                  Config switch: %i\n", _hwMock_readConfigSwitch_value);
-	return _hwMock_readConfigSwitch_value;
+uint8_t hwPeripherals_readMonoSwitch() {
+	printf("HwMock:                  Mono switch: %i\n", _hwMock_readMonoSwitch_value);
+	return _hwMock_readMonoSwitch_value;
 }
 
 void hwPeripherals_writeMidiByte(uint8_t byte) {
