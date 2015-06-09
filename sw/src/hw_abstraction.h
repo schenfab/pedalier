@@ -35,9 +35,14 @@ void hwAbstraction_turnOffLed();
 //   bit 0 maps to pedal no. 1 (lowest tone), ..., bit 24 maps to pedal 
 //   no. 25.
 // * midiChannel: the configured MIDI channel (0 - 15).
-// * configSwitches: three configuration switches (bits 2 - 0).
-// * monoSwitch: 0: polyphonic sound, 1: monophonic sound. 
+// * configSwitch0: bit 4 of the DIP switch (not used)
+// * configSwitch1: bit 5 of the DIP switch (not used)
+// * invertPedalsSwitch: bit 6 of the DIP switch. 0: no inversion. 
+//   1: invert the inputs of the pedals.
+// * monoSwitch: bit 7 of the DIP switch. 0: polyphonic sound, 
+//   1: monophonic sound. 
 void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *midiChannel, 
-	uint8_t *configSwitches, uint8_t *monoSwitch);
+	uint8_t *configSwitch0, uint8_t *configSwitch1, 
+	uint8_t *invertPedalsSwitch, uint8_t *monoSwitch);
 
 #endif // _HW_ABSTRACTION_H_

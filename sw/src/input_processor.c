@@ -28,7 +28,9 @@
 
 uint32_t previousPedalState, currentPedalState;
 uint8_t midiChannel;
-uint8_t configSwitches;
+uint8_t configSwitch0;
+uint8_t configSwitch1;
+uint8_t invertPedalsSwitch;
 uint8_t monoSwitch;
 
 // TODO: is the lowest C on the pedal board really C1 (=midi 24)?
@@ -62,8 +64,17 @@ void _sendMidiNoteOff(uint8_t index) {
 void _inputProcessor_getStateChangeFromHw() {
 	previousPedalState = currentPedalState;
 	hwAbstraction_getPeripheralState(&currentPedalState, &midiChannel, 
-		&configSwitches, &monoSwitch);
+		&configSwitch0, &configSwitch1, &invertPedalsSwitch, &monoSwitch);
 }
+
+// If 'invertPedalsSwitch == 1' the state of the pedals is inverted. This is useful for
+// hardware bringup
+void _inputProcessor_whenConfiguredThenInvertPedalState() {
+	if(invertPedalsSwitch != 0) {
+		currentPedalState = ~currentPedalState;
+	}
+}
+
 
 // Filters the currentPedalState.
 // Debounces the state changes.
@@ -140,6 +151,7 @@ void inputProcessor_processInputs() {
 	_inputProcessor_getStateChangeFromHw();
 
 	// Process inputs
+	_inputProcessor_whenConfiguredThenInvertPedalState();
 	_inputProcessor_debounce();
 	_inputProcessor_filterMonophony();
 
