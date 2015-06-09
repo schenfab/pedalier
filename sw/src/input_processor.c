@@ -27,11 +27,7 @@
 // ***********************************************************************
 
 uint32_t previousPedalState, currentPedalState;
-uint8_t midiChannel;
-uint8_t configSwitch0;
-uint8_t configSwitch1;
-uint8_t invertPedalsSwitch;
-uint8_t monoSwitch;
+uint8_t configSwitches;
 
 // TODO: is the lowest C on the pedal board really C1 (=midi 24)?
 const uint8_t midiNoteNumbers[25] = 
@@ -45,6 +41,7 @@ const uint8_t midiNoteNumbers[25] =
 
 // Sends a midi note on command for pedal index
 void _sendMidiNoteOn(uint8_t index) {
+	uint8_t midiChannel = hwAbstraction_filterMidiChannel(configSwitches);
 	// Information taken from the Hammond XK-3c owners manual
 	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
 	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
@@ -53,6 +50,7 @@ void _sendMidiNoteOn(uint8_t index) {
 
 // Sends a midi note off command for pedal index
 void _sendMidiNoteOff(uint8_t index) {
+	uint8_t midiChannel = hwAbstraction_filterMidiChannel(configSwitches);
 	// Information taken from the Hammond XK-3c owners manual
 	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
 	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
@@ -63,13 +61,13 @@ void _sendMidiNoteOff(uint8_t index) {
 // locally stored previous state
 void _inputProcessor_getStateChangeFromHw() {
 	previousPedalState = currentPedalState;
-	hwAbstraction_getPeripheralState(&currentPedalState, &midiChannel, 
-		&configSwitch0, &configSwitch1, &invertPedalsSwitch, &monoSwitch);
+	hwAbstraction_getPeripheralState(&currentPedalState, &configSwitches);
 }
 
 // If 'invertPedalsSwitch == 1' the state of the pedals is inverted. This is useful for
 // hardware bringup
 void _inputProcessor_whenConfiguredThenInvertPedalState() {
+	uint8_t invertPedalsSwitch = hwAbstraction_filterInvertPedalsSwitch(configSwitches);
 	if(invertPedalsSwitch != 0) {
 		currentPedalState = ~currentPedalState;
 	}
@@ -87,6 +85,7 @@ void _inputProcessor_debounce() {
 // of following, higher notes are filtered.
 // In polyphonic mode nothing is done.
 void _inputProcessor_filterMonophony() {
+	uint8_t monoSwitch = hwAbstraction_filterMonoSwitch(configSwitches);
 	if(monoSwitch == 0) {
 		// Polyphonic mode
 		return;

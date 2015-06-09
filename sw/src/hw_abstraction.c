@@ -72,9 +72,7 @@ void hwAbstraction_turnOffLed() {
 }
 
 
-void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *midiChannel, 
-	uint8_t *configSwitch0, uint8_t *configSwitch1, 
-	uint8_t *invertPedalsSwitch, uint8_t *monoSwitch) {
+void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *configSwitches) {
 	uint8_t byte[4];
 
 	// Freeze data in shift registers
@@ -87,21 +85,33 @@ void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *midiChannel,
 	byte[2] = _hwAbstraction_readSerialByte();
 	byte[3] = _hwAbstraction_readSerialByte();
 
-	*monoSwitch = hwPeripherals_readMonoSwitch();
+	*configSwitches = hwPeripherals_readMonoSwitch() << 7;
 
 	// Load new data into shift registers
 	hwPeripherals_waitForTimer();
 	hwPeripherals_clrSerialShLd();
 
 	// Process data
-	*midiChannel = byte[0] & 0x0F;
-	*configSwitch0 = (byte[0] & 0x10) >> 4;
-	*configSwitch1 = (byte[0] & 0x20) >> 5;
-	*invertPedalsSwitch = (byte[0] & 0x40) >> 6;
+	*configSwitches |= (byte[0] & 0x7F);
 	*pedals = 
 		((uint32_t)(byte[3]) << 24) |
 		((uint32_t)(byte[2]) << 16) |
 		((uint32_t)(byte[1]) <<  8) |
 		((uint32_t)(byte[0]) <<  0);
 	*pedals = *pedals >> 7;
+}
+
+
+uint8_t hwAbstraction_filterMidiChannel(uint8_t configSwitches) {
+	return (configSwitches & 0x0F);
+}
+
+
+uint8_t hwAbstraction_filterInvertPedalsSwitch(uint8_t configSwitches) {
+	return ((configSwitches & 0x40) >> 6);
+}
+
+
+uint8_t hwAbstraction_filterMonoSwitch(uint8_t configSwitches) {
+	return ((configSwitches & 0x80) >> 7);
 }
