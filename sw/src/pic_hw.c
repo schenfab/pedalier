@@ -38,12 +38,12 @@ uint8_t state_portc;
 void _picHw_configOscillator() {
 	// OSCCON: Oscillator control register
 	//      7: Reserved   0
-	//   6..4: ICRF       110   4MHz
+	//   6..4: ICRF       111   8MHz
 	//      3: OSTS       0     (ro)
 	//      2: HTS        0     (ro)
 	//      1: LTS        0     (ro)
 	//      0: SCS        1     Internal oscillator for system clock
-	OSCCON = 0x61;
+	OSCCON = 0x71;
 
 	// OSCTUNE:
 	//   Oscillator is running at the calibrated frequency
