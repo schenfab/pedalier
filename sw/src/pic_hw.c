@@ -174,15 +174,6 @@ uint8_t hwPeripherals_readSerialData() {
 	return serData;
 }
 
-void hwPeripherals_waitForTimer() {
-	uint8_t wait8;
-	// TODO: adjust wait time to HW measurements
-	for(wait8 = 0; wait8 < 255; wait8++);
-	for(wait8 = 0; wait8 < 255; wait8++);
-	for(wait8 = 0; wait8 < 255; wait8++);
-	for(wait8 = 0; wait8 < 255; wait8++);
-}
-
 void hwPeripherals_turnOnLed() {
 	state_portc |= 0x08;   // Set RC3
 	PORTC = state_portc;

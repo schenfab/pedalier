@@ -36,10 +36,6 @@ void hwPeripherals_clrSerialShLd();
 // input. The return value is either 0 or 1.
 uint8_t hwPeripherals_readSerialData();
 
-// Start a timer and wait for its expiration. The duration is half a clock
-// period on the serial bus.
-void hwPeripherals_waitForTimer();
-
 // Turn on and off the status LED
 void hwPeripherals_turnOnLed();
 void hwPeripherals_turnOffLed();

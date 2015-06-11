@@ -29,10 +29,7 @@
 // Private methods
 // ***********************************************************************
 void hwAbstraction_clkPulse() {
-	hwPeripherals_waitForTimer();
 	hwPeripherals_setSerialClk();
-
-	hwPeripherals_waitForTimer();
 	hwPeripherals_clrSerialClk();
 }
 
@@ -76,7 +73,6 @@ void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *configSwitches)
 	uint8_t byte[4];
 
 	// Freeze data in shift registers
-	hwPeripherals_waitForTimer();
 	hwPeripherals_setSerialShLd();
 
 	// Read data
@@ -88,7 +84,6 @@ void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *configSwitches)
 	*configSwitches = hwPeripherals_readMonoSwitch() << 7;
 
 	// Load new data into shift registers
-	hwPeripherals_waitForTimer();
 	hwPeripherals_clrSerialShLd();
 
 	// Process data
