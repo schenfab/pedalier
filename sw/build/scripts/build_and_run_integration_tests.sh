@@ -24,7 +24,7 @@ SRC_PATH=${BASE_PATH}/src
 OUTPUT_PATH=${BASE_PATH}/build/output
 EXPECTED_PATH=${BASE_PATH}/build/expected_test_output
 
-DEFINED_TEST_NOs="1 2"
+DEFINED_TEST_NOs="1 2 3"
 
 # Remove all artifacts
 rm -r ${OUTPUT_PATH}/*

@@ -1,0 +1,916 @@
+HwMock: resetting serial state to:
+HwMock: Clk: 0, ShLd: 0
+HwMock: resetting status LED to:
+HwMock:                  Status LED: 0
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 0
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 0
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 0
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 1
+HwMock:                          MIDI output ready: 1
+HwMock:                  MIDI TX: 0x91
+HwMock:                          MIDI output ready: 1
+HwMock:                  MIDI TX: 0x30
+HwMock:                          MIDI output ready: 1
+HwMock:                  MIDI TX: 0x7F
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 0
+HwMock:                          MIDI output ready: 1
+HwMock:                  MIDI TX: 0x91
+HwMock:                          MIDI output ready: 1
+HwMock:                  MIDI TX: 0x30
+HwMock:                          MIDI output ready: 1
+HwMock:                  MIDI TX: 0x00
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 0
+HwMock: Clk: 0, ShLd: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock: Clk: 1, ShLd: 1
+HwMock: Clk: 0, ShLd: 1
+HwMock:                  Data: 0
+HwMock:                  Mono switch: 0
+HwMock: Clk: 0, ShLd: 0
+HwMock:                  Status LED: 0
