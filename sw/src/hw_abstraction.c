@@ -28,19 +28,15 @@
 // ***********************************************************************
 // Private methods
 // ***********************************************************************
-void hwAbstraction_clkPulse() {
-	hwPeripherals_setSerialClk();
-	hwPeripherals_clrSerialClk();
-}
-
 
 uint8_t _hwAbstraction_readSerialByte() {
 	uint8_t byte = 0;
 	uint8_t i;
 
 	for(i = 7; i != 255; i--) {
-		hwAbstraction_clkPulse();
+		hwPeripherals_clrSerialClk();
 		byte |= hwPeripherals_readSerialData() << i;
+		hwPeripherals_setSerialClk();
 	}
 
 	return byte;
@@ -68,7 +64,6 @@ void hwAbstraction_turnOffLed() {
 	hwPeripherals_turnOffLed();
 }
 
-
 void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *configSwitches) {
 	uint8_t byte[4];
 
@@ -88,6 +83,7 @@ void hwAbstraction_getPeripheralState(uint32_t *pedals, uint8_t *configSwitches)
 
 	// Process data
 	*configSwitches |= (byte[0] & 0x7F);
+
 	*pedals = 
 		((uint32_t)(byte[3]) << 24) |
 		((uint32_t)(byte[2]) << 16) |
