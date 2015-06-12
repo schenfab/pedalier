@@ -134,9 +134,9 @@ void _picHw_configUart() {
 	BAUDCTL = 0x00;
 
 	// SPBRG: 
-	// 31250 baud @ 4MHz system clock: 
-	// SYNC = 0, BRGH = 0, BRG16 = 0, SPBRG = 2 = 0x02
-	SPBRG = 0x02;
+	// 31250 baud @ 8MHz system clock: 
+	// SYNC = 0, BRGH = 0, BRG16 = 0, SPBRG = 3 = 0x03
+	SPBRG = 0x03;
 
 	// SPBRGH: (only used for 16-bit baud rate generator)
 	SPBRGH = 0x00;
