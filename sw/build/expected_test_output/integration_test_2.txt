@@ -3,7 +3,6 @@ HwMock: Clk: 0, ShLd: 0
 HwMock: resetting status LED to:
 HwMock:                  Status LED: 0
 HwMock: Clk: 0, ShLd: 1
-HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
@@ -99,10 +98,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 0
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -199,8 +198,9 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x9F
@@ -208,7 +208,6 @@ HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x28
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x7F
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -305,10 +304,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -405,10 +404,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -505,10 +504,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -605,8 +604,9 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 0
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x9F
@@ -614,7 +614,6 @@ HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x28
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x00
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -711,8 +710,9 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x9F
@@ -720,7 +720,6 @@ HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x28
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x7F
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -817,10 +816,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -917,10 +916,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -1017,8 +1016,9 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x9F
@@ -1032,7 +1032,6 @@ HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x28
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x00
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -1129,8 +1128,9 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 0
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x9F
@@ -1138,7 +1138,6 @@ HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x29
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x00
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -1235,8 +1234,9 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x9F
@@ -1244,7 +1244,6 @@ HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x28
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x7F
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -1341,10 +1340,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -1441,10 +1440,10 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 1
-HwMock: Clk: 0, ShLd: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
@@ -1541,8 +1540,9 @@ HwMock:                  Data: 1
 HwMock: Clk: 1, ShLd: 1
 HwMock: Clk: 0, ShLd: 1
 HwMock:                  Data: 1
+HwMock: Clk: 1, ShLd: 1
 HwMock:                  Mono switch: 1
-HwMock: Clk: 0, ShLd: 0
+HwMock: Clk: 1, ShLd: 0
 HwMock:                  Status LED: 0
 HwMock:                          MIDI output ready: 1
 HwMock:                  MIDI TX: 0x9F
