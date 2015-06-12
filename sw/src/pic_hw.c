@@ -201,7 +201,7 @@ void hwPeripherals_clrSerialShLd() {
 
 uint8_t hwPeripherals_readSerialData() {
 	uint8_t serData;
-	serData = PORTC >> 2;   // Read RC2
+	serData = (PORTC & 0x04) >> 2;   // Read RC2
 	return serData;
 }
 
@@ -217,7 +217,7 @@ void hwPeripherals_turnOffLed() {
 
 uint8_t hwPeripherals_readMonoSwitch() {
 	uint8_t monoSwitch;
-	monoSwitch = PORTA >> 5;   // Read RA5
+	monoSwitch = (PORTA & 0x20) >> 5;   // Read RA5
 	return monoSwitch;
 }
 
