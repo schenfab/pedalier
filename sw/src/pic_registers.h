@@ -24,5 +24,6 @@ extern __sfr __at (0x87) TRISC;
 extern __sfr __at (0x8C) PIE1;
 extern __sfr __at (0x8F) OSCCON;
 extern __sfr __at (0x90) OSCTUNE;
+extern __sfr __at (0x91) ANSEL;
 
 #endif  /* _PIC_REGISTERS_H_ */

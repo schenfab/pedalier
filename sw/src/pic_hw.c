@@ -99,6 +99,18 @@ void _picHw_configIOs() {
 	//     0: RC0  0  output (SER_CLK)
 	TRISC = 0xE4;
 
+	// Analog / digital input configuration of port C
+	// ANSEL: Analog Select Register
+	//     7: ANS7  0  AN7/RC3 is a digital input
+	//     6: ANS6  0  AN6/RC2
+	//     5: ANS5  0  AN5/RC1
+	//     4: ANS4  0  AN4/RC0
+	//     3: ANS3  0  AN3/RA4
+	//     2: ANS2  0  AN2/RA2
+	//     1: ANS1  0  AN1/RA1
+	//     0: ANS0  0  AN0/RA0
+	ANSEL = 0x00;
+
 	// Default values of output ports:
 	// SER_SH: 0
 	// SER_CLK: 0
