@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 2.9.0 #5416 (Feb  3 2010) (UNIX)
-; This file was generated Thu May 14 22:31:11 2015
+; This file was generated Fri Jun 12 15:04:58 2015
 ;--------------------------------------------------------
 ; PIC port for the 14-bit core
 ;--------------------------------------------------------
@@ -9,6 +9,10 @@
 	list	p=16f688
 	radix dec
 	include "p16f688.inc"
+;--------------------------------------------------------
+; config word 
+;--------------------------------------------------------
+	__config 0xd4
 ;--------------------------------------------------------
 ; external declarations
 ;--------------------------------------------------------
@@ -31,6 +35,7 @@
 	extern	_PIE1
 	extern	_OSCCON
 	extern	_OSCTUNE
+	extern	_ANSEL
 
 	extern PSAVE
 	extern SSAVE
@@ -56,7 +61,6 @@
 	global	_hwPeripherals_readMonoSwitch
 	global	_hwPeripherals_turnOffLed
 	global	_hwPeripherals_turnOnLed
-	global	_hwPeripherals_waitForTimer
 	global	_hwPeripherals_readSerialData
 	global	_hwPeripherals_clrSerialShLd
 	global	_hwPeripherals_setSerialShLd
@@ -83,8 +87,9 @@ _state_portc	res	1
 ;--------------------------------------------------------
 UDL_pic_hw_0	udata
 r0x1004	res	1
-r0x1003	res	1
+r0x1005	res	1
 r0x1002	res	1
+r0x1003	res	1
 r0x1001	res	1
 ;--------------------------------------------------------
 ; initialized data
@@ -108,21 +113,21 @@ code_pic_hw	code
 ;; Starting pCode block
 _hwPeripherals_isMidiOutputReady	;Function start
 ; 2 exit points
-;	.line	210; "../../src/pic_hw.c"	pir1 = PIR1;
+;	.line	232; "../../src/pic_hw.c"	pir1 = PIR1;
 	BANKSEL	_PIR1
 	MOVF	_PIR1,W
 	BANKSEL	r0x1001
 	MOVWF	r0x1001
-;	.line	211; "../../src/pic_hw.c"	if((pir1 & 0x02) == 0) {
+;	.line	233; "../../src/pic_hw.c"	if((pir1 & 0x02) == 0) {
 	BTFSC	r0x1001,1
-	GOTO	_00178_DS_
-;	.line	212; "../../src/pic_hw.c"	return 0;
+	GOTO	_00162_DS_
+;	.line	234; "../../src/pic_hw.c"	return 0;
 	MOVLW	0x00
-	GOTO	_00180_DS_
-_00178_DS_
-;	.line	215; "../../src/pic_hw.c"	return 1;
+	GOTO	_00164_DS_
+_00162_DS_
+;	.line	237; "../../src/pic_hw.c"	return 1;
 	MOVLW	0x01
-_00180_DS_
+_00164_DS_
 	RETURN	
 ; exit point of _hwPeripherals_isMidiOutputReady
 
@@ -135,10 +140,10 @@ _00180_DS_
 ;; Starting pCode block
 _hwPeripherals_writeMidiByte	;Function start
 ; 2 exit points
-;	.line	202; "../../src/pic_hw.c"	void hwPeripherals_writeMidiByte(uint8_t byte) {
+;	.line	224; "../../src/pic_hw.c"	void hwPeripherals_writeMidiByte(uint8_t byte) {
 	BANKSEL	_TXREG
 	MOVWF	_TXREG
-;	.line	203; "../../src/pic_hw.c"	TXREG = byte;
+;	.line	225; "../../src/pic_hw.c"	TXREG = byte;
 	RETURN	
 ; exit point of _hwPeripherals_writeMidiByte
 
@@ -148,22 +153,26 @@ _hwPeripherals_writeMidiByte	;Function start
 ;entry:  _hwPeripherals_readMonoSwitch	;Function start
 ; 2 exit points
 ;has an exit
-;1 compiler assigned register :
+;2 compiler assigned registers:
 ;   r0x1002
+;   r0x1003
 ;; Starting pCode block
 _hwPeripherals_readMonoSwitch	;Function start
 ; 2 exit points
-;	.line	198; "../../src/pic_hw.c"	monoSwitch = PORTA >> 5;   // Read RA5
+;	.line	220; "../../src/pic_hw.c"	monoSwitch = (PORTA & 0x20) >> 5;   // Read RA5
+	MOVLW	0x20
 	BANKSEL	_PORTA
-	SWAPF	_PORTA,W
-	ANDLW	0x0f
+	ANDWF	_PORTA,W
 	BANKSEL	r0x1002
 	MOVWF	r0x1002
+	SWAPF	r0x1002,W
+	ANDLW	0x0f
+	MOVWF	r0x1003
 ;shiftRight_Left2ResultLit:4862: shCount=1, size=1, sign=0, same=1, offr=0
 	BCF	STATUS,0
-	RRF	r0x1002,F
-;	.line	199; "../../src/pic_hw.c"	return monoSwitch;
-	MOVF	r0x1002,W
+	RRF	r0x1003,F
+;	.line	221; "../../src/pic_hw.c"	return monoSwitch;
+	MOVF	r0x1003,W
 	RETURN	
 ; exit point of _hwPeripherals_readMonoSwitch
 
@@ -176,10 +185,10 @@ _hwPeripherals_readMonoSwitch	;Function start
 ;; Starting pCode block
 _hwPeripherals_turnOffLed	;Function start
 ; 2 exit points
-;	.line	192; "../../src/pic_hw.c"	state_portc &= ~(0x08);   // Clear RC3
+;	.line	214; "../../src/pic_hw.c"	state_portc &= ~(0x08);   // Clear RC3
 	BANKSEL	_state_portc
 	BCF	_state_portc,3
-;	.line	193; "../../src/pic_hw.c"	PORTC = state_portc;
+;	.line	215; "../../src/pic_hw.c"	PORTC = state_portc;
 	MOVF	_state_portc,W
 	BANKSEL	_PORTC
 	MOVWF	_PORTC
@@ -195,10 +204,10 @@ _hwPeripherals_turnOffLed	;Function start
 ;; Starting pCode block
 _hwPeripherals_turnOnLed	;Function start
 ; 2 exit points
-;	.line	187; "../../src/pic_hw.c"	state_portc |= 0x08;   // Set RC3
+;	.line	209; "../../src/pic_hw.c"	state_portc |= 0x08;   // Set RC3
 	BANKSEL	_state_portc
 	BSF	_state_portc,3
-;	.line	188; "../../src/pic_hw.c"	PORTC = state_portc;
+;	.line	210; "../../src/pic_hw.c"	PORTC = state_portc;
 	MOVF	_state_portc,W
 	BANKSEL	_PORTC
 	MOVWF	_PORTC
@@ -208,69 +217,30 @@ _hwPeripherals_turnOnLed	;Function start
 ;***
 ;  pBlock Stats: dbName = C
 ;***
-;entry:  _hwPeripherals_waitForTimer	;Function start
-; 2 exit points
-;has an exit
-;1 compiler assigned register :
-;   r0x1003
-;; Starting pCode block
-_hwPeripherals_waitForTimer	;Function start
-; 2 exit points
-;	.line	180; "../../src/pic_hw.c"	for(wait8 = 0; wait8 < 255; wait8++);
-	MOVLW	0xff
-	BANKSEL	r0x1003
-	MOVWF	r0x1003
-_00147_DS_
-	BANKSEL	r0x1003
-	DECFSZ	r0x1003,F
-	GOTO	_00147_DS_
-;	.line	181; "../../src/pic_hw.c"	for(wait8 = 0; wait8 < 255; wait8++);
-	MOVLW	0xff
-	MOVWF	r0x1003
-_00150_DS_
-	BANKSEL	r0x1003
-	DECFSZ	r0x1003,F
-	GOTO	_00150_DS_
-;	.line	182; "../../src/pic_hw.c"	for(wait8 = 0; wait8 < 255; wait8++);
-	MOVLW	0xff
-	MOVWF	r0x1003
-_00153_DS_
-	BANKSEL	r0x1003
-	DECFSZ	r0x1003,F
-	GOTO	_00153_DS_
-;	.line	183; "../../src/pic_hw.c"	for(wait8 = 0; wait8 < 255; wait8++);
-	MOVLW	0xff
-	MOVWF	r0x1003
-_00156_DS_
-	BANKSEL	r0x1003
-	DECFSZ	r0x1003,F
-	GOTO	_00156_DS_
-	RETURN	
-; exit point of _hwPeripherals_waitForTimer
-
-;***
-;  pBlock Stats: dbName = C
-;***
 ;entry:  _hwPeripherals_readSerialData	;Function start
 ; 2 exit points
 ;has an exit
-;1 compiler assigned register :
+;2 compiler assigned registers:
 ;   r0x1004
+;   r0x1005
 ;; Starting pCode block
 _hwPeripherals_readSerialData	;Function start
 ; 2 exit points
-;shiftRight_Left2ResultLit:4862: shCount=1, size=1, sign=0, same=0, offr=0
-;	.line	173; "../../src/pic_hw.c"	serData = PORTC >> 2;   // Read RC2
-	BCF	STATUS,0
+;	.line	204; "../../src/pic_hw.c"	serData = (PORTC & 0x04) >> 2;   // Read RC2
+	MOVLW	0x04
 	BANKSEL	_PORTC
-	RRF	_PORTC,W
+	ANDWF	_PORTC,W
 	BANKSEL	r0x1004
 	MOVWF	r0x1004
+;shiftRight_Left2ResultLit:4862: shCount=1, size=1, sign=0, same=0, offr=0
+	BCF	STATUS,0
+	RRF	r0x1004,W
+	MOVWF	r0x1005
 ;shiftRight_Left2ResultLit:4862: shCount=1, size=1, sign=0, same=1, offr=0
 	BCF	STATUS,0
-	RRF	r0x1004,F
-;	.line	174; "../../src/pic_hw.c"	return serData;
-	MOVF	r0x1004,W
+	RRF	r0x1005,F
+;	.line	205; "../../src/pic_hw.c"	return serData;
+	MOVF	r0x1005,W
 	RETURN	
 ; exit point of _hwPeripherals_readSerialData
 
@@ -283,10 +253,10 @@ _hwPeripherals_readSerialData	;Function start
 ;; Starting pCode block
 _hwPeripherals_clrSerialShLd	;Function start
 ; 2 exit points
-;	.line	167; "../../src/pic_hw.c"	state_portc &= ~(0x01);   // Clear RC0
+;	.line	198; "../../src/pic_hw.c"	state_portc &= ~(0x01);   // Clear RC0
 	BANKSEL	_state_portc
 	BCF	_state_portc,0
-;	.line	168; "../../src/pic_hw.c"	PORTC = state_portc;
+;	.line	199; "../../src/pic_hw.c"	PORTC = state_portc;
 	MOVF	_state_portc,W
 	BANKSEL	_PORTC
 	MOVWF	_PORTC
@@ -302,10 +272,10 @@ _hwPeripherals_clrSerialShLd	;Function start
 ;; Starting pCode block
 _hwPeripherals_setSerialShLd	;Function start
 ; 2 exit points
-;	.line	162; "../../src/pic_hw.c"	state_portc |= 0x01;   // Set RC0
+;	.line	193; "../../src/pic_hw.c"	state_portc |= 0x01;   // Set RC0
 	BANKSEL	_state_portc
 	BSF	_state_portc,0
-;	.line	163; "../../src/pic_hw.c"	PORTC = state_portc;
+;	.line	194; "../../src/pic_hw.c"	PORTC = state_portc;
 	MOVF	_state_portc,W
 	BANKSEL	_PORTC
 	MOVWF	_PORTC
@@ -321,10 +291,10 @@ _hwPeripherals_setSerialShLd	;Function start
 ;; Starting pCode block
 _hwPeripherals_clrSerialClk	;Function start
 ; 2 exit points
-;	.line	157; "../../src/pic_hw.c"	state_portc &= ~(0x02);   // Clear RC1
+;	.line	188; "../../src/pic_hw.c"	state_portc &= ~(0x02);   // Clear RC1
 	BANKSEL	_state_portc
 	BCF	_state_portc,1
-;	.line	158; "../../src/pic_hw.c"	PORTC = state_portc;
+;	.line	189; "../../src/pic_hw.c"	PORTC = state_portc;
 	MOVF	_state_portc,W
 	BANKSEL	_PORTC
 	MOVWF	_PORTC
@@ -340,10 +310,10 @@ _hwPeripherals_clrSerialClk	;Function start
 ;; Starting pCode block
 _hwPeripherals_setSerialClk	;Function start
 ; 2 exit points
-;	.line	152; "../../src/pic_hw.c"	state_portc |= 0x02;   // Set RC1
+;	.line	183; "../../src/pic_hw.c"	state_portc |= 0x02;   // Set RC1
 	BANKSEL	_state_portc
 	BSF	_state_portc,1
-;	.line	153; "../../src/pic_hw.c"	PORTC = state_portc;
+;	.line	184; "../../src/pic_hw.c"	PORTC = state_portc;
 	MOVF	_state_portc,W
 	BANKSEL	_PORTC
 	MOVWF	_PORTC
@@ -368,13 +338,13 @@ _hwPeripherals_setSerialClk	;Function start
 ;; Starting pCode block
 _picHw_init	;Function start
 ; 2 exit points
-;	.line	141; "../../src/pic_hw.c"	_picHw_configOscillator();
+;	.line	172; "../../src/pic_hw.c"	_picHw_configOscillator();
 	CALL	__picHw_configOscillator
-;	.line	142; "../../src/pic_hw.c"	_picHw_disableInterrupts();
+;	.line	173; "../../src/pic_hw.c"	_picHw_disableInterrupts();
 	CALL	__picHw_disableInterrupts
-;	.line	143; "../../src/pic_hw.c"	_picHw_configIOs();
+;	.line	174; "../../src/pic_hw.c"	_picHw_configIOs();
 	CALL	__picHw_configIOs
-;	.line	144; "../../src/pic_hw.c"	_picHw_configUart();
+;	.line	175; "../../src/pic_hw.c"	_picHw_configUart();
 	CALL	__picHw_configUart
 	RETURN	
 ; exit point of _picHw_init
@@ -388,18 +358,18 @@ _picHw_init	;Function start
 ;; Starting pCode block
 __picHw_configUart	;Function start
 ; 2 exit points
-;	.line	103; "../../src/pic_hw.c"	BAUDCTL = 0x00;
+;	.line	134; "../../src/pic_hw.c"	BAUDCTL = 0x00;
 	BANKSEL	_BAUDCTL
 	CLRF	_BAUDCTL
-;	.line	108; "../../src/pic_hw.c"	SPBRG = 0x02;
-	MOVLW	0x02
+;	.line	139; "../../src/pic_hw.c"	SPBRG = 0x03;
+	MOVLW	0x03
 	MOVWF	_SPBRG
-;	.line	111; "../../src/pic_hw.c"	SPBRGH = 0x00;
+;	.line	142; "../../src/pic_hw.c"	SPBRGH = 0x00;
 	CLRF	_SPBRGH
-;	.line	122; "../../src/pic_hw.c"	TXSTA = 0x20;
+;	.line	153; "../../src/pic_hw.c"	TXSTA = 0x20;
 	MOVLW	0x20
 	MOVWF	_TXSTA
-;	.line	133; "../../src/pic_hw.c"	RCSTA = 0x80;
+;	.line	164; "../../src/pic_hw.c"	RCSTA = 0x80;
 	MOVLW	0x80
 	MOVWF	_RCSTA
 	RETURN	
@@ -414,17 +384,19 @@ __picHw_configUart	;Function start
 ;; Starting pCode block
 __picHw_configIOs	;Function start
 ; 2 exit points
-;	.line	69; "../../src/pic_hw.c"	TRISA = 0xFF;
+;	.line	88; "../../src/pic_hw.c"	TRISA = 0xFF;
 	MOVLW	0xff
 	BANKSEL	_TRISA
 	MOVWF	_TRISA
-;	.line	81; "../../src/pic_hw.c"	TRISC = 0xE4;
+;	.line	100; "../../src/pic_hw.c"	TRISC = 0xE4;
 	MOVLW	0xe4
 	MOVWF	_TRISC
-;	.line	88; "../../src/pic_hw.c"	state_portc = 0x00;
+;	.line	112; "../../src/pic_hw.c"	ANSEL = 0x00;
+	CLRF	_ANSEL
+;	.line	119; "../../src/pic_hw.c"	state_portc = 0x00;
 	BANKSEL	_state_portc
 	CLRF	_state_portc
-;	.line	89; "../../src/pic_hw.c"	PORTC = state_portc;
+;	.line	120; "../../src/pic_hw.c"	PORTC = state_portc;
 	BANKSEL	_PORTC
 	CLRF	_PORTC
 	RETURN	
@@ -439,7 +411,7 @@ __picHw_configIOs	;Function start
 ;; Starting pCode block
 __picHw_disableInterrupts	;Function start
 ; 2 exit points
-;	.line	55; "../../src/pic_hw.c"	INTCON = 0x00;
+;	.line	74; "../../src/pic_hw.c"	INTCON = 0x00;
 	BANKSEL	_INTCON
 	CLRF	_INTCON
 	RETURN	
@@ -454,17 +426,17 @@ __picHw_disableInterrupts	;Function start
 ;; Starting pCode block
 __picHw_configOscillator	;Function start
 ; 2 exit points
-;	.line	46; "../../src/pic_hw.c"	OSCCON = 0x61;
-	MOVLW	0x61
+;	.line	65; "../../src/pic_hw.c"	OSCCON = 0x71;
+	MOVLW	0x71
 	BANKSEL	_OSCCON
 	MOVWF	_OSCCON
-;	.line	50; "../../src/pic_hw.c"	OSCTUNE = 0x00;
+;	.line	69; "../../src/pic_hw.c"	OSCTUNE = 0x00;
 	CLRF	_OSCTUNE
 	RETURN	
 ; exit point of __picHw_configOscillator
 
 
 ;	code size estimation:
-;	   92+   30 =   122 instructions (  304 byte)
+;	   82+   25 =   107 instructions (  264 byte)
 
 	end
