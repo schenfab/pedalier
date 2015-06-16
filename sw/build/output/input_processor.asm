@@ -1,7 +1,7 @@
 ;--------------------------------------------------------
 ; File Created by SDCC : free open source ANSI-C Compiler
 ; Version 2.9.0 #5416 (Feb  3 2010) (UNIX)
-; This file was generated Fri Jun 12 15:04:58 2015
+; This file was generated Tue Jun 16 16:38:13 2015
 ;--------------------------------------------------------
 ; PIC port for the 14-bit core
 ;--------------------------------------------------------
@@ -95,6 +95,30 @@ r0x1018	res	1
 
 ID_input_processor_0	code
 _midiNoteNumbers
+	retlw 0x3c
+
+	retlw 0x3b
+
+	retlw 0x3a
+
+	retlw 0x39
+
+	retlw 0x38
+
+	retlw 0x37
+
+	retlw 0x36
+
+	retlw 0x35
+
+	retlw 0x34
+
+	retlw 0x33
+
+	retlw 0x32
+
+	retlw 0x31
+
 	retlw 0x30
 
 	retlw 0x2f
@@ -120,30 +144,6 @@ _midiNoteNumbers
 	retlw 0x25
 
 	retlw 0x24
-
-	retlw 0x23
-
-	retlw 0x22
-
-	retlw 0x21
-
-	retlw 0x20
-
-	retlw 0x1f
-
-	retlw 0x1e
-
-	retlw 0x1d
-
-	retlw 0x1c
-
-	retlw 0x1b
-
-	retlw 0x1a
-
-	retlw 0x19
-
-	retlw 0x18
 
 
 ;--------------------------------------------------------
@@ -174,15 +174,15 @@ code_input_processor	code
 ;; Starting pCode block
 _inputProcessor_processInputs	;Function start
 ; 2 exit points
-;	.line	150; "../../src/input_processor.c"	_inputProcessor_getStateChangeFromHw();
+;	.line	149; "../../src/input_processor.c"	_inputProcessor_getStateChangeFromHw();
 	CALL	__inputProcessor_getStateChangeFromHw
-;	.line	153; "../../src/input_processor.c"	_inputProcessor_whenConfiguredThenInvertPedalState();
+;	.line	152; "../../src/input_processor.c"	_inputProcessor_whenConfiguredThenInvertPedalState();
 	CALL	__inputProcessor_whenConfiguredThenInvertPedalState
-;	.line	154; "../../src/input_processor.c"	_inputProcessor_debounce();
+;	.line	153; "../../src/input_processor.c"	_inputProcessor_debounce();
 	CALL	__inputProcessor_debounce
-;	.line	155; "../../src/input_processor.c"	_inputProcessor_filterMonophony();
+;	.line	154; "../../src/input_processor.c"	_inputProcessor_filterMonophony();
 	CALL	__inputProcessor_filterMonophony
-;	.line	158; "../../src/input_processor.c"	_inputProcessor_publishResult();
+;	.line	157; "../../src/input_processor.c"	_inputProcessor_publishResult();
 	CALL	__inputProcessor_publishResult
 	RETURN	
 ; exit point of _inputProcessor_processInputs
@@ -196,7 +196,7 @@ _inputProcessor_processInputs	;Function start
 ;; Starting pCode block
 _inputProcessor_init	;Function start
 ; 2 exit points
-;	.line	143; "../../src/input_processor.c"	previousPedalState = 0x01FFFFFF;
+;	.line	142; "../../src/input_processor.c"	previousPedalState = 0x01FFFFFF;
 	MOVLW	0xff
 	BANKSEL	_previousPedalState
 	MOVWF	_previousPedalState
@@ -204,7 +204,7 @@ _inputProcessor_init	;Function start
 	MOVWF	(_previousPedalState + 2)
 	MOVLW	0x01
 	MOVWF	(_previousPedalState + 3)
-;	.line	144; "../../src/input_processor.c"	currentPedalState = 0x01FFFFFF;
+;	.line	143; "../../src/input_processor.c"	currentPedalState = 0x01FFFFFF;
 	MOVLW	0xff
 	BANKSEL	_currentPedalState
 	MOVWF	_currentPedalState
@@ -247,14 +247,14 @@ _inputProcessor_init	;Function start
 ;; Starting pCode block
 __inputProcessor_publishResult	;Function start
 ; 2 exit points
-;	.line	113; "../../src/input_processor.c"	uint32_t mask = 0x00000001;
+;	.line	112; "../../src/input_processor.c"	uint32_t mask = 0x00000001;
 	MOVLW	0x01
 	BANKSEL	r0x100C
 	MOVWF	r0x100C
 	CLRF	r0x100D
 	CLRF	r0x100E
 	CLRF	r0x100F
-;	.line	116; "../../src/input_processor.c"	if((currentPedalState & 0x01FFFFFF) != 0x01FFFFFF) {
+;	.line	115; "../../src/input_processor.c"	if((currentPedalState & 0x01FFFFFF) != 0x01FFFFFF) {
 	BANKSEL	_currentPedalState
 	MOVF	_currentPedalState,W
 	BANKSEL	r0x1010
@@ -285,7 +285,7 @@ __inputProcessor_publishResult	;Function start
 	BTFSS	STATUS,2
 	GOTO	_00162_DS_
 	MOVF	r0x1013,W
-;	.line	117; "../../src/input_processor.c"	hwAbstraction_turnOnLed();
+;	.line	116; "../../src/input_processor.c"	hwAbstraction_turnOnLed();
 	XORLW	0x01
 	BTFSC	STATUS,2
 	GOTO	_00143_DS_
@@ -295,12 +295,12 @@ _00162_DS_
 	PAGESEL	$
 	GOTO	_00160_DS_
 _00143_DS_
-;	.line	120; "../../src/input_processor.c"	hwAbstraction_turnOffLed();
+;	.line	119; "../../src/input_processor.c"	hwAbstraction_turnOffLed();
 	PAGESEL	_hwAbstraction_turnOffLed
 	CALL	_hwAbstraction_turnOffLed
 	PAGESEL	$
 _00160_DS_
-;	.line	124; "../../src/input_processor.c"	for(i = 0; i < 25; i++) {
+;	.line	123; "../../src/input_processor.c"	for(i = 0; i < 25; i++) {
 	BANKSEL	r0x1010
 	CLRF	r0x1010
 ;unsigned compare: left < lit(0x19=25), size=1
@@ -310,8 +310,8 @@ _00150_DS_
 	SUBWF	r0x1010,W
 	BTFSC	STATUS,0
 	GOTO	_00154_DS_
-;genSkipc:3083: created from rifx:0xbfef9054
-;	.line	125; "../../src/input_processor.c"	if((previousPedalState & mask) != (currentPedalState & mask)) {
+;genSkipc:3083: created from rifx:0xbfe71264
+;	.line	124; "../../src/input_processor.c"	if((previousPedalState & mask) != (currentPedalState & mask)) {
 	MOVF	r0x100C,W
 	BANKSEL	_previousPedalState
 	ANDWF	_previousPedalState,W
@@ -365,7 +365,7 @@ _00150_DS_
 	BTFSS	STATUS,2
 	GOTO	_00164_DS_
 	MOVF	r0x1018,W
-;	.line	126; "../../src/input_processor.c"	if((currentPedalState & mask) == 0) {
+;	.line	125; "../../src/input_processor.c"	if((currentPedalState & mask) == 0) {
 	XORWF	r0x1014,W
 	BTFSC	STATUS,2
 	GOTO	_00149_DS_
@@ -377,24 +377,24 @@ _00164_DS_
 	IORWF	r0x1018,W
 	BTFSS	STATUS,2
 	GOTO	_00146_DS_
-;	.line	127; "../../src/input_processor.c"	_sendMidiNoteOn(i);
+;	.line	126; "../../src/input_processor.c"	_sendMidiNoteOn(i);
 	MOVF	r0x1010,W
 	CALL	__sendMidiNoteOn
 	GOTO	_00149_DS_
 _00146_DS_
-;	.line	130; "../../src/input_processor.c"	_sendMidiNoteOff(i);
+;	.line	129; "../../src/input_processor.c"	_sendMidiNoteOff(i);
 	BANKSEL	r0x1010
 	MOVF	r0x1010,W
 	CALL	__sendMidiNoteOff
 _00149_DS_
-;	.line	133; "../../src/input_processor.c"	mask = mask << 1;
+;	.line	132; "../../src/input_processor.c"	mask = mask << 1;
 	BCF	STATUS,0
 	BANKSEL	r0x100C
 	RLF	r0x100C,F
 	RLF	r0x100D,F
 	RLF	r0x100E,F
 	RLF	r0x100F,F
-;	.line	124; "../../src/input_processor.c"	for(i = 0; i < 25; i++) {
+;	.line	123; "../../src/input_processor.c"	for(i = 0; i < 25; i++) {
 	INCF	r0x1010,F
 	GOTO	_00150_DS_
 _00154_DS_
@@ -423,7 +423,7 @@ _00154_DS_
 ;; Starting pCode block
 __inputProcessor_filterMonophony	;Function start
 ; 2 exit points
-;	.line	88; "../../src/input_processor.c"	uint8_t monoSwitch = hwAbstraction_filterMonoSwitch(configSwitches);
+;	.line	87; "../../src/input_processor.c"	uint8_t monoSwitch = hwAbstraction_filterMonoSwitch(configSwitches);
 	BANKSEL	_configSwitches
 	MOVF	_configSwitches,W
 	PAGESEL	_hwAbstraction_filterMonoSwitch
@@ -431,18 +431,18 @@ __inputProcessor_filterMonophony	;Function start
 	PAGESEL	$
 	BANKSEL	r0x1009
 	MOVWF	r0x1009
-;	.line	89; "../../src/input_processor.c"	if(monoSwitch == 0) {
+;	.line	88; "../../src/input_processor.c"	if(monoSwitch == 0) {
 	MOVF	r0x1009,W
-;	.line	91; "../../src/input_processor.c"	return;
+;	.line	90; "../../src/input_processor.c"	return;
 	BTFSC	STATUS,2
-;	.line	95; "../../src/input_processor.c"	uint32_t lowestNote = 0x01000000;
+;	.line	94; "../../src/input_processor.c"	uint32_t lowestNote = 0x01000000;
 	GOTO	_00137_DS_
 	CLRF	r0x1009
 	CLRF	r0x100A
 	CLRF	r0x100B
 	MOVLW	0x01
 	MOVWF	r0x100C
-;	.line	97; "../../src/input_processor.c"	for(i = 0; i <= 25; i++) {
+;	.line	96; "../../src/input_processor.c"	for(i = 0; i <= 25; i++) {
 	CLRF	r0x100D
 ;swapping arguments (AOP_TYPEs 1/2)
 ;unsigned compare: left >= lit(0x1A=26), size=1
@@ -452,8 +452,8 @@ _00130_DS_
 	SUBWF	r0x100D,W
 	BTFSC	STATUS,0
 	GOTO	_00133_DS_
-;genSkipc:3083: created from rifx:0xbfef9054
-;	.line	99; "../../src/input_processor.c"	if((currentPedalState & lowestNote) == 0) {
+;genSkipc:3083: created from rifx:0xbfe71264
+;	.line	98; "../../src/input_processor.c"	if((currentPedalState & lowestNote) == 0) {
 	MOVF	r0x1009,W
 	BANKSEL	_currentPedalState
 	ANDWF	_currentPedalState,W
@@ -481,17 +481,17 @@ _00130_DS_
 	BTFSC	STATUS,2
 	GOTO	_00133_DS_
 ;shiftRight_Left2ResultLit:4862: shCount=1, size=4, sign=0, same=1, offr=0
-;	.line	102; "../../src/input_processor.c"	lowestNote = lowestNote >> 1;
+;	.line	101; "../../src/input_processor.c"	lowestNote = lowestNote >> 1;
 	BCF	STATUS,0
 	RRF	r0x100C,F
 	RRF	r0x100B,F
 	RRF	r0x100A,F
 	RRF	r0x1009,F
-;	.line	97; "../../src/input_processor.c"	for(i = 0; i <= 25; i++) {
+;	.line	96; "../../src/input_processor.c"	for(i = 0; i <= 25; i++) {
 	INCF	r0x100D,F
 	GOTO	_00130_DS_
 _00133_DS_
-;	.line	105; "../../src/input_processor.c"	currentPedalState = 0x01FFFFFF & (~lowestNote);
+;	.line	104; "../../src/input_processor.c"	currentPedalState = 0x01FFFFFF & (~lowestNote);
 	BANKSEL	r0x1009
 	COMF	r0x1009,W
 	BANKSEL	_currentPedalState
@@ -527,7 +527,7 @@ _00137_DS_
 ;; Starting pCode block
 __inputProcessor_debounce	;Function start
 ; 2 exit points
-;	.line	81; "../../src/input_processor.c"	}
+;	.line	80; "../../src/input_processor.c"	}
 	RETURN	
 ; exit point of __inputProcessor_debounce
 
@@ -545,7 +545,7 @@ __inputProcessor_debounce	;Function start
 ;; Starting pCode block
 __inputProcessor_whenConfiguredThenInvertPedalState	;Function start
 ; 2 exit points
-;	.line	70; "../../src/input_processor.c"	uint8_t invertPedalsSwitch = hwAbstraction_filterInvertPedalsSwitch(configSwitches);
+;	.line	69; "../../src/input_processor.c"	uint8_t invertPedalsSwitch = hwAbstraction_filterInvertPedalsSwitch(configSwitches);
 	BANKSEL	_configSwitches
 	MOVF	_configSwitches,W
 	PAGESEL	_hwAbstraction_filterInvertPedalsSwitch
@@ -553,11 +553,11 @@ __inputProcessor_whenConfiguredThenInvertPedalState	;Function start
 	PAGESEL	$
 	BANKSEL	r0x1009
 	MOVWF	r0x1009
-;	.line	71; "../../src/input_processor.c"	if(invertPedalsSwitch != 0) {
+;	.line	70; "../../src/input_processor.c"	if(invertPedalsSwitch != 0) {
 	MOVF	r0x1009,W
 	BTFSC	STATUS,2
 	GOTO	_00119_DS_
-;	.line	72; "../../src/input_processor.c"	currentPedalState = ~currentPedalState;
+;	.line	71; "../../src/input_processor.c"	currentPedalState = ~currentPedalState;
 	BANKSEL	_currentPedalState
 	COMF	_currentPedalState,W
 	MOVWF	_currentPedalState
@@ -595,7 +595,7 @@ _00119_DS_
 ;; Starting pCode block
 __inputProcessor_getStateChangeFromHw	;Function start
 ; 2 exit points
-;	.line	63; "../../src/input_processor.c"	previousPedalState = currentPedalState;
+;	.line	62; "../../src/input_processor.c"	previousPedalState = currentPedalState;
 	BANKSEL	_currentPedalState
 	MOVF	_currentPedalState,W
 	BANKSEL	_previousPedalState
@@ -612,7 +612,7 @@ __inputProcessor_getStateChangeFromHw	;Function start
 	MOVF	(_currentPedalState + 3),W
 	BANKSEL	_previousPedalState
 	MOVWF	(_previousPedalState + 3)
-;	.line	64; "../../src/input_processor.c"	hwAbstraction_getPeripheralState(&currentPedalState, &configSwitches);
+;	.line	63; "../../src/input_processor.c"	hwAbstraction_getPeripheralState(&currentPedalState, &configSwitches);
 	MOVLW	high (_currentPedalState + 0)
 	BANKSEL	r0x1009
 	MOVWF	r0x1009
@@ -665,10 +665,10 @@ __inputProcessor_getStateChangeFromHw	;Function start
 ;; Starting pCode block
 __sendMidiNoteOff	;Function start
 ; 2 exit points
-;	.line	52; "../../src/input_processor.c"	void _sendMidiNoteOff(uint8_t index) {
+;	.line	51; "../../src/input_processor.c"	void _sendMidiNoteOff(uint8_t index) {
 	BANKSEL	r0x1009
 	MOVWF	r0x1009
-;	.line	53; "../../src/input_processor.c"	uint8_t midiChannel = hwAbstraction_filterMidiChannel(configSwitches);
+;	.line	52; "../../src/input_processor.c"	uint8_t midiChannel = hwAbstraction_filterMidiChannel(configSwitches);
 	BANKSEL	_configSwitches
 	MOVF	_configSwitches,W
 	PAGESEL	_hwAbstraction_filterMidiChannel
@@ -676,7 +676,7 @@ __sendMidiNoteOff	;Function start
 	PAGESEL	$
 	BANKSEL	r0x100A
 	MOVWF	r0x100A
-;	.line	55; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
+;	.line	54; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
 	MOVLW	0x0f
 	ANDWF	r0x100A,F
 	MOVLW	0x90
@@ -685,7 +685,7 @@ __sendMidiNoteOff	;Function start
 	PAGESEL	_hwAbstraction_sendMidiByte
 	CALL	_hwAbstraction_sendMidiByte
 	PAGESEL	$
-;	.line	56; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
+;	.line	55; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
 	BANKSEL	r0x1009
 	MOVF	r0x1009,W
 	ADDLW	(_midiNoteNumbers + 0)
@@ -706,7 +706,7 @@ __sendMidiNoteOff	;Function start
 	PAGESEL	_hwAbstraction_sendMidiByte
 	CALL	_hwAbstraction_sendMidiByte
 	PAGESEL	$
-;	.line	57; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x00);  // velocity
+;	.line	56; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x00);  // velocity
 	MOVLW	0x00
 	PAGESEL	_hwAbstraction_sendMidiByte
 	CALL	_hwAbstraction_sendMidiByte
@@ -740,10 +740,10 @@ __sendMidiNoteOff	;Function start
 ;; Starting pCode block
 __sendMidiNoteOn	;Function start
 ; 2 exit points
-;	.line	43; "../../src/input_processor.c"	void _sendMidiNoteOn(uint8_t index) {
+;	.line	42; "../../src/input_processor.c"	void _sendMidiNoteOn(uint8_t index) {
 	BANKSEL	r0x1009
 	MOVWF	r0x1009
-;	.line	44; "../../src/input_processor.c"	uint8_t midiChannel = hwAbstraction_filterMidiChannel(configSwitches);
+;	.line	43; "../../src/input_processor.c"	uint8_t midiChannel = hwAbstraction_filterMidiChannel(configSwitches);
 	BANKSEL	_configSwitches
 	MOVF	_configSwitches,W
 	PAGESEL	_hwAbstraction_filterMidiChannel
@@ -751,7 +751,7 @@ __sendMidiNoteOn	;Function start
 	PAGESEL	$
 	BANKSEL	r0x100A
 	MOVWF	r0x100A
-;	.line	46; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
+;	.line	45; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x90 | (midiChannel & 0x0F));  // status and channel [1-16]
 	MOVLW	0x0f
 	ANDWF	r0x100A,F
 	MOVLW	0x90
@@ -760,7 +760,7 @@ __sendMidiNoteOn	;Function start
 	PAGESEL	_hwAbstraction_sendMidiByte
 	CALL	_hwAbstraction_sendMidiByte
 	PAGESEL	$
-;	.line	47; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
+;	.line	46; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(midiNoteNumbers[index]);  // note number
 	BANKSEL	r0x1009
 	MOVF	r0x1009,W
 	ADDLW	(_midiNoteNumbers + 0)
@@ -781,7 +781,7 @@ __sendMidiNoteOn	;Function start
 	PAGESEL	_hwAbstraction_sendMidiByte
 	CALL	_hwAbstraction_sendMidiByte
 	PAGESEL	$
-;	.line	48; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x7F);  // velocity
+;	.line	47; "../../src/input_processor.c"	hwAbstraction_sendMidiByte(0x7F);  // velocity
 	MOVLW	0x7f
 	PAGESEL	_hwAbstraction_sendMidiByte
 	CALL	_hwAbstraction_sendMidiByte
